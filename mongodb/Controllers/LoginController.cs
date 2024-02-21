@@ -10,10 +10,12 @@ namespace mongodb.Controllers
     public class LoginController : ControllerBase
     {
         private readonly ILogin ilogin;
+        private readonly IEmail iemail;
 
-        public LoginController(ILogin ilogin)
+        public LoginController(ILogin ilogin, IEmail iemail)
         {
             this.ilogin = ilogin;
+            this.iemail = iemail;
         }
 
         [HttpPost("Login")]
@@ -35,6 +37,20 @@ namespace mongodb.Controllers
                     return Ok(res);
                 }
             }
+        }
+        [HttpPost("Send Email")]
+        public async Task<IActionResult> SendEmail(MailRequest mailrequest)
+        {
+            var res = await iemail.SendEmailAsync(mailrequest);
+            if (res == 0)
+            {
+                return Problem("Fail to send mail");
+            }
+            else
+            {
+                return Ok("Email sent successfully");
+            }
+
         }
     }
 }

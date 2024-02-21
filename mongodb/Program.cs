@@ -83,11 +83,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 
-
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 //Adding contacts and interfaces services 
 builder.Services.AddScoped<IRole, IRoleImplementation>();
 builder.Services.AddScoped<IStudent, IStudentImplementation>();
-builder.Services.AddScoped<ILogin,ILoginImplementation>();  
+builder.Services.AddScoped<ILogin,ILoginImplementation>();
+builder.Services.AddTransient<IEmail, EmailImplementation>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -105,3 +106,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
