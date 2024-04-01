@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mongodb", "mongodb\mongodb.csproj", "{1981F7BB-4F77-471E-9886-E7AF66D91B06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mongodb", "mongodb\mongodb.csproj", "{1981F7BB-4F77-471E-9886-E7AF66D91B06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleEmail", "SimpleEmailPackage\SimpleEmail.csproj", "{A6736041-453E-4D20-BDC2-1C57A0E5CB75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1981F7BB-4F77-471E-9886-E7AF66D91B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1981F7BB-4F77-471E-9886-E7AF66D91B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1981F7BB-4F77-471E-9886-E7AF66D91B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6736041-453E-4D20-BDC2-1C57A0E5CB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6736041-453E-4D20-BDC2-1C57A0E5CB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6736041-453E-4D20-BDC2-1C57A0E5CB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6736041-453E-4D20-BDC2-1C57A0E5CB75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

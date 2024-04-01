@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -8,12 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.Identity.MongoDbCore" Version="3.1.2" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-    <PackageReference Include="MailKit" Version="4.3.0" />
+    <PackageReference Include="MailKit" Version="4.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.2" />
-    <PackageReference Include="MimeKit" Version="4.3.0" />
+    <PackageReference Include="MimeKit" Version="4.4.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.23.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleEmailPackage\SimpleEmail.csproj" />
+    <ProjectReference Include="..\SimpleEmail\SimpleEmailPackage.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AspNetCore.SimpleEmail">
+      <HintPath>D:\c drive\Asp.Net Core\AspNetCore.SimpleEmail\bin\Debug\net8.0\AspNetCore.SimpleEmail.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
